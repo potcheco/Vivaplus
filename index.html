@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Comprar Planilha Viva+</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f8ff;
+      color: #333;
+      max-width: 480px;
+      margin: 20px auto;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #9ecfff;
+    }
+    h1 {
+      color: #0055cc;
+      text-align: center;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    .price {
+      font-size: 28px;
+      font-weight: bold;
+      color: #007acc;
+      margin: 10px 0;
+      text-align: center;
+    }
+    .pix-qr {
+      display: block;
+      margin: 20px auto;
+      max-width: 250px;
+      border: 4px solid #007acc;
+      border-radius: 10px;
+    }
+    .btn-pagar {
+      background-color: #007acc;
+      color: white;
+      padding: 14px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 15px;
+      transition: background-color 0.3s ease;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-pagar:hover {
+      background-color: #005fa3;
+    }
+    .download-link {
+      display: none;
+      margin-top: 20px;
+      text-align: center;
+    }
+    .download-link a {
+      background-color: #28a745;
+      color: white;
+      padding: 12px 22px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+    .download-link a:hover {
+      background-color: #1e7e34;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #666;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Planilha Viva+</h1>
+  <img src="https://i.imgur.com/O0y2kOi.png" alt="Planilha Viva+ - Controle de treino e alimentação" />
+  <p>Transforme sua rotina com a <strong>Planilha Viva+</strong>: controle fácil e automático de treino e alimentação para emagrecer, ganhar massa e melhorar sua qualidade de vida.</p>
+  <p class="price">R$ 9,99</p>
+
+  <h3>Pague via Pix</h3>
+  <p>Escaneie o QR Code abaixo com o aplicativo do seu banco ou clique no botão para abrir o Pix com valor já preenchido:</p>
+  <img class="pix-qr" src="https://api.qrserver.com/v1/create-qr-code/?data=00020126580014BR.GOV.BCB.PIX01362298876127052040000530398654049.9905802BR5926Willian%20Pacheco6008Maca%C3%A962070503***6304B1E6&size=250x250" alt="QR Code Pix R$9,99" />
+
+  <a href="pix://00020126580014BR.GOV.BCB.PIX01362298876127040000530398654049.9905802BR5926Willian%20Pacheco6008Maca%C3%A962070503***6304B1E6" class="btn-pagar" id="btnPagar">Abrir Pix e liberar download</a>
+
+  <div class="download-link" id="downloadLink">
+    <p>Pagamento confirmado (simulado). Clique no botão abaixo para baixar sua planilha:</p>
+    <a href="https://example.com/planilha-viva-mais.xlsx" download>Baixar Planilha Viva+</a>
+  </div>
+
+  <footer>
+    <p>Obrigado pela sua compra! Qualquer dúvida, entre em contato.</p>
+  </footer>
+
+  <script>
+    document.getElementById('btnPagar').addEventListener('click', function() {
+      setTimeout(() => {
+        document.getElementById('downloadLink').style.display = 'block';
+        this.style.display = 'none';
+      }, 1000);
+    });
+  </script>
+
+</body>
+</html>
